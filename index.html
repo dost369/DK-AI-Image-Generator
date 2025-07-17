@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt-to-Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">ImageGen AI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#generator-section">Generate</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero-section" class="hero">
+            <div class="hero-content">
+                <h1>Unleash Your Imagination</h1>
+                <p>Transform text into stunning images with the power of AI.</p>
+                <a href="#generator-section" class="button">Start Generating</a>
+            </div>
+        </section>
+
+        <section id="generator-section" class="generator-container">
+            <h2>Generate Your Image</h2>
+            <div class="input-group">
+                <label for="prompt">Enter your prompt:</label>
+                <textarea id="prompt" placeholder="e.g., A futuristic city at sunset with flying cars and neon lights"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="negative-prompt">Negative prompt (optional):</label>
+                <input type="text" id="negative-prompt" placeholder="e.g., blurry, low quality, deformed, text">
+            </div>
+            <button id="generateBtn">Generate Image</button>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Generating image...</p>
+            </div>
+
+            <div id="image-output" class="hidden">
+                <h3>Your Generated Image:</h3>
+                <img id="generatedImage" src="" alt="Generated Image">
+                <a id="downloadLink" href="#" download="generated_image.png" class="button download-button hidden">Download Image</a>
+            </div>
+            <div id="error-message" class="error-message hidden"></div>
+        </section>
+
+        <section id="about-section" class="about-container">
+            <h2>About ImageGen AI</h2>
+            <p>ImageGen AI is a cutting-edge tool that leverages advanced deep learning models from Hugging Face to convert your textual descriptions into unique visual art. Simply describe what you envision, and our AI will bring it to life.</p>
+            <p>Our goal is to make powerful AI accessible to creators, designers, and anyone with a vision.</p>
+        </section>
+
+        <section id="contact-section" class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? Reach out to us!</p>
+            <p>Email: <a href="mailto:info@imagegen.ai">info@imagegen.ai</a></p>
+            <p>Follow us on social media (links coming soon!)</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ImageGen AI. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
